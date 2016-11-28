@@ -1,0 +1,95 @@
+.home {
+    .pan {
+        height: 100vh;
+        transition: transform 40s linear;
+
+        &.active {
+            transform: translateX(-200px);
+        }
+
+        img {
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+
+    .panel {
+        @include full;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 6rem;
+
+        h1, h2, p {
+            margin:0;
+            color: $white;
+        }
+
+        &.title {
+            opacity: 0;
+            h1,h2 {
+                font-size: 6rem;
+            }
+
+            h2 {
+                font-size: 3rem;
+                color: $firehot;
+            }
+
+        }
+
+        &.logo {
+            z-index: 3;
+            opacity: 0;
+
+            background-image: url('/static/img/fondotitle.jpg');
+            background-size: cover;
+
+            h1 {
+                opacity:0;
+                font-size: 5rem;
+            }
+
+            h2 {
+                opacity:0;
+                font-size: 2.5rem;
+                margin-top: -10px;
+            }
+
+            p {
+                opacity: 0;
+                font-size: 2rem;
+            }
+        }
+
+        &.def {
+            opacity: 0;
+            p {
+                margin: 2rem 0;
+                font-size: 1.5rem;
+            }
+        }
+        &.doc, &.data, &.ask, &.geoyes, &.geono {
+            opacity: 0;
+            button {
+                margin: 1rem;
+            }
+            p {
+                margin: 1.5rem 0;
+                font-size: 2rem;
+            }
+        }
+
+        &.ask {
+            background-image: url('/static/img/fondogeo.jpg');
+            background-size: cover;
+        }
+
+        &.geoyes, &.geono {
+            pointer-events: none;
+        }
+    }
+}

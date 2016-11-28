@@ -1,0 +1,22 @@
+//Mixins
+@mixin full() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+@mixin fadein($delay:'0s', $duration:'1s') {
+  animation-name: fadein;
+  animation-duration: unquote($duration);
+  animation-delay: unquote($delay);
+  animation-fill-mode: forwards;
+}
+
+@mixin fadeout($delay:'0s', $duration:'1s') {
+  animation-name: fadeout;
+  animation-duration: unquote($duration);
+  animation-delay: unquote($delay);
+  animation-fill-mode: forwards;
+}

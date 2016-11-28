@@ -1,0 +1,99 @@
+<section class="doc">
+
+<!--     <div data-preloader class="is-hidden">
+        <div data-bar></div>
+    </div>
+ -->
+    <div class="counter" data-time="{{content.totalTime}}">
+      <div class="bar"></div>
+    </div>
+
+    <div class="doc-content hidden">
+        <div class="state before out" data-time="{{content.before.time}}">
+          <div class="slide out poster">
+            <div>Antes</div>
+          </div>
+            {{#each content.before.selection}}
+               <div class="slide out">
+                   <span class="year">{{year}} | {{hito}}</span>
+                   {{#if mp4}}
+                        <video src="/static/media/{{mp4}}"></video>
+                   {{/if}}
+
+                   {{#if mp3}}
+                        <audio src="/static/media/{{mp3}}"></audio>
+                   {{/if}}
+
+                   {{#if jpg}}
+                        <img src="/static/media/{{jpg}}">
+                   {{/if}}
+
+                   {{#if texto}}
+                        <div class="text">{{texto}}</div>
+                   {{/if}}
+               </div>
+            {{/each}}
+            <audio data-background src="/static/media/antes.mp3"></audio>
+        </div>
+        <div class="state during out" data-time="{{content.during.time}}">
+        <div class="slide out poster">
+          <div>Durante</div>
+        </div>
+
+        {{#each content.during.selection}}
+           <div class="slide out">
+               <span class="year">{{year}} | {{hito}}</span>
+
+               {{#if mp4}}
+                    <video src="/static/media/{{mp4}}"></video>
+               {{/if}}
+
+               {{#if mp3}}
+                    <audio src="/static/media/{{mp3}}"></audio>
+               {{/if}}
+
+               {{#if jpg}}
+                    <img src="/static/media/{{jpg}}">
+               {{/if}}
+
+               {{#if texto}}
+                    <div class="text">{{texto}}</div>
+               {{/if}}
+           </div>
+        {{/each}}
+        <audio data-background src="/static/media/durante.mp3"></audio>
+
+        </div>
+        <div class="state after out" data-time="{{content.after.time}}">
+        <div class="slide out poster">
+          <div>Después</div>
+        </div>
+
+        {{#each content.after.selection}}
+           <div class="slide out">
+              <span class="year">{{year}} | {{hito}}</span>
+
+
+               {{#if mp4}}
+                    <video src="/static/media/{{mp4}}"></video>
+               {{/if}}
+
+               {{#if mp3}}
+                    <audio src="/static/media/{{mp3}}"></audio>
+               {{/if}}
+
+               {{#if jpg}}
+                    <img src="/static/media/{{jpg}}">
+               {{/if}}
+
+               {{#if texto}}
+                    <div class="text">{{texto}}</div>
+               {{/if}}
+           </div>
+        {{/each}}
+        <audio data-background src="/static/media/despues.mp3"></audio>
+
+        </div>
+
+    </div>
+</section>

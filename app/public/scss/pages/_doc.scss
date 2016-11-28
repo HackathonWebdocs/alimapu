@@ -1,0 +1,63 @@
+.doc {
+    color: white;
+
+    .counter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10000;
+
+      .bar {
+        background: white;
+        height: 30px;
+        width: 0;
+
+      }
+
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+
+    .slide, .state {
+      @include full;
+    }
+
+    .state {
+      .poster {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 6rem;
+      }
+    }
+
+    .slide {
+      img, video {
+        object-fit: cover;
+        min-width: 100vw;
+        height: 100vh;
+      }
+
+
+      .text {
+        position: absolute;
+        right: 0;
+        top: 20%;
+        padding: 1rem;
+        background: rgba(0,0,0,0.5);
+        font-size: 2rem;
+      }
+
+      .year {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        padding: 1rem;
+        background: rgba(0,0,0,0.5);
+        font-size: 1rem;
+      }
+    }
+
+}
