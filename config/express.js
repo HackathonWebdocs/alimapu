@@ -13,10 +13,6 @@ const i18n = require('i18n');
 
 const bodyParser = require('body-parser');
 
-const cookieParser = require('cookie-parser');
-const cookieSession = require('cookie-session');
-const session = require('express-session');
-
 
 module.exports = function(app) {
 
@@ -53,34 +49,34 @@ module.exports = function(app) {
      * Cookie
      */
 
-    app.use(cookieParser());
-    app.use(cookieSession({
-        secret: app.locals.config.secret
-    }));
+    // app.use(cookieParser());
+    // app.use(cookieSession({
+    //     secret: app.locals.config.secret
+    // }));
 
 
     /**
      * Session
      */
 
-    if (env === 'development') {
-        app.use(session({
-            secret: app.locals.config.secret,
-            resave: true,
-            saveUninitialized: true
-        }));
-    } else if (env === 'production') {
-        const RedisStore = require('connect-redis')(session);
-        app.use(session({
-            store: new RedisStore({
-                host: 'localhost',
-                port: 6379
-            }),
-            secret: app.locals.config.secret,
-            resave: true,
-            saveUninitialized: true
-        }));
-    }
+    // if (env === 'development') {
+    //     app.use(session({
+    //         secret: app.locals.config.secret,
+    //         resave: true,
+    //         saveUninitialized: true
+    //     }));
+    // } else if (env === 'production') {
+    //     const RedisStore = require('connect-redis')(session);
+    //     app.use(session({
+    //         store: new RedisStore({
+    //             host: 'localhost',
+    //             port: 6379
+    //         }),
+    //         secret: app.locals.config.secret,
+    //         resave: true,
+    //         saveUninitialized: true
+    //     }));
+    // }
 
     /**
      * Init i18n
