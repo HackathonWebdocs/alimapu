@@ -18,7 +18,7 @@ const production = require('./env/production');
 const defaults = {
     root: path.join(__dirname, '..'),
     info: {
-        image: '/static/img/share.png',
+        image: '/static/img/image.jpg',
         description: 'Alimapu. Tierra quemada',
         name: 'Alimapu'
     },
