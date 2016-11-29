@@ -7,12 +7,31 @@
     background-image: url('/static/img/fondogeo.jpg');
     background-size: cover;
 
+    .reload {
+        a {
+            font-size: 2rem;
+        }
+    }
+
+    .extra {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+
+
 
     a {
         color: black;
         background: white;
         padding: 1rem;
         text-decoration: none;
-        font-size: 2rem;
+        margin: 1rem;
+        display: block;
+        font-size: 1rem;
+        flex-grow: 1;
+
     }
 }

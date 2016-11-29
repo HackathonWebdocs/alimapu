@@ -1,6 +1,15 @@
 .doc {
     color: white;
 
+    .preload {
+      @include full;
+      z-index: 1000000;
+      box-sizing: border-box;
+      padding: 5rem;
+      text-align: center;
+
+    }
+
     .counter {
       position: absolute;
       top: 0;

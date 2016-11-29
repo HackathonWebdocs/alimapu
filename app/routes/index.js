@@ -15,6 +15,7 @@ module.exports = (app) => {
     app.get('/', controllers.index);
     app.get('/doc/:time', controllers.doc);
     app.get('/end/:time', controllers.end);
+    app.get('/creditos', controllers.credits);
     app.post('/geo', controllers.geo);
 
 

@@ -25,7 +25,7 @@ module.exports = (app) => {
                 layout: 'main',
                 app: 'home',
                 meta: {
-                    title: 'Alimapu. Tierra quemada.'
+                    title: 'Bienvenida - Alimapu. Tierra quemada.'
                 }
             });
         },
@@ -57,7 +57,7 @@ module.exports = (app) => {
                 app: 'doc',
                 content: result,
                 meta: {
-                    title: 'Alimapu. Tierra quemada.'
+                    title: 'Documental aleatorio - Alimapu. Tierra quemada.'
                 }
             });
 
@@ -68,7 +68,16 @@ module.exports = (app) => {
                 app: 'end',
                 time: req.params.time,
                 meta: {
-                    title: 'Alimapu. Tierra quemada.'
+                    title: 'Final - Alimapu. Tierra quemada.'
+                }
+            });
+        },
+        credits: (req, res) => {
+            return res.render('credits', {
+                layout: 'main',
+                app: 'credits',
+                meta: {
+                    title: 'Créditos - Alimapu. Tierra quemada.'
                 }
             });
         }

@@ -4,6 +4,8 @@ module.exports = {
     cache: true,
     entry: {
         home: './app/public/js/home.js',
+        end: './app/public/js/end.js',
+        credits: './app/public/js/credits.js',
         doc: './app/public/js/doc.js'
     },
     output: {
