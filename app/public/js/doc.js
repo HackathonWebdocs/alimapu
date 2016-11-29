@@ -79,13 +79,17 @@ const playState = () => {
 };
 
 const $videos = $('video');
+const $percent = $('.percent');
 const totalVideos = $videos.length;
 let loaded = 0;
 
 $videos.on('canplay', (e) => {
     loaded++;
 
+    $percent.text(Math.ceil(loaded * 100 / totalVideos));
+
     if(loaded === totalVideos) {
+        $percent.text(100);
         playState();
     }
 });
