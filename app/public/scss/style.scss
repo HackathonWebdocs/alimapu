@@ -1,5 +1,5 @@
 //Fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700|Open+Sans:300,400,700');
 
 //Modules
 @import '../../../node_modules/font-awesome/scss/font-awesome';
@@ -24,15 +24,16 @@ $firemelt: #800909;
 
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
     background: $black;
+
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
 }
 
 .out {
     @include fadeout('0s', '2s');
-    pointer-events: none;
 
+    pointer-events: none;
     * {
         pointer-events: none;
     }
@@ -40,5 +41,6 @@ body {
 
 .in {
     @include fadein('0s', '2s');
+
     pointer-events: auto;
 }

@@ -1,72 +1,68 @@
 .doc {
     color: white;
-
     .preload {
-      @include full;
-      z-index: 1000000;
-      box-sizing: border-box;
-      padding: 5rem;
-      text-align: center;
+        @include full;
 
+        padding: 5rem;
+
+        box-sizing: border-box;
+        text-align: center;
+        z-index: 1000000;
     }
-
     .counter {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 10000;
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 10000;
+        .bar {
+            background: white;
 
-      .bar {
-        background: white;
-        height: 30px;
-        width: 0;
-
-      }
-
+            height: 30px;
+            width: 0;
+        }
     }
-
     .hidden {
-      opacity: 0;
+        opacity: 0;
     }
-
     .slide, .state {
-      @include full;
+        @include full;
     }
-
     .state {
-      .poster {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 6rem;
-      }
+        .poster {
+            align-items: flex-end;
+            display: flex;
+            font-size: 6rem;
+            justify-content: flex-end;
+            div {
+                padding: 0 4rem 4rem 0;
+            }
+        }
     }
-
     .slide {
-      img, video {
-        object-fit: cover;
-        min-width: 100vw;
-        height: 100vh;
-      }
+        img, video {
+            height: 100vh;
+            min-width: 100vw;
+            object-fit: cover;
+        }
+        .text {
+            padding: 1rem;
 
+            background: rgba(0,0,0,.5);
 
-      .text {
-        position: absolute;
-        right: 0;
-        top: 20%;
-        padding: 1rem;
-        background: rgba(0,0,0,0.5);
-        font-size: 2rem;
-      }
+            font-size: 2rem;
+            position: absolute;
+            right: 0;
+            top: 20%;
+        }
+        .year {
+            padding: 1rem;
 
-      .year {
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        padding: 1rem;
-        background: rgba(0,0,0,0.5);
-        font-size: 1rem;
-      }
+            background: rgba(0,0,0,.5);
+
+            bottom: 0;
+            font-size: 1.3rem;
+            left: 0;
+            position: absolute;
+        }
     }
-
 }

@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
     cache: true,
@@ -9,7 +10,7 @@ module.exports = {
         doc: './app/public/js/doc.js'
     },
     output: {
-        path: './dist/js',
+        path: path.join(__dirname, 'dist/js'),
         filename: '[name].js',
         publicPath: '/js/',
         chunkFilename: '[id].[name].js'

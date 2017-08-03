@@ -2,74 +2,69 @@
     .pan {
         height: 100vh;
         transition: transform 40s linear;
-
         &.active {
             transform: translateX(-200px);
         }
-
         img {
             height: 100vh;
             object-fit: cover;
         }
     }
-
     .panel {
-        @include full;
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
-        text-align: center;
         box-sizing: border-box;
         padding: 6rem;
+        text-align: center;
 
+        @include full;
+        align-items: center;
+        justify-content: center;
         h1, h2, p {
-            margin:0;
+            margin: 0;
             color: $white;
         }
-
         &.title {
+            flex-direction: row;
+            align-items: flex-start;
             opacity: 0;
-            h1,h2 {
+            h1, h2 {
                 font-size: 6rem;
+                text-transform: uppercase;
             }
-
             h2 {
                 font-size: 3rem;
                 color: $firehot;
             }
-
         }
-
         &.logo {
+            flex-direction: row;
+            align-items: flex-start;
             z-index: 3;
             opacity: 0;
-
             background-image: url('/static/img/fondotitle.jpg');
             background-size: cover;
-
             h1 {
-                opacity:0;
                 font-size: 5rem;
+                text-transform: uppercase;
+                opacity: 0;
             }
-
             h2 {
-                opacity:0;
+                text-transform: uppercase;
                 font-size: 2.5rem;
                 margin-top: -10px;
-            }
-
-            p {
                 opacity: 0;
+            }
+            p {
                 font-size: 2rem;
+                opacity: 0;
             }
         }
-
         &.def {
             opacity: 0;
             p {
-                margin: 2rem 0;
                 font-size: 1.5rem;
+                margin: 2rem 0;
             }
         }
         &.doc, &.data, &.ask, &.geoyes, &.geono {
@@ -78,16 +73,14 @@
                 margin: 1rem;
             }
             p {
-                margin: 1.5rem 0;
                 font-size: 2rem;
+                margin: 1.5rem 0;
             }
         }
-
         &.ask {
             background-image: url('/static/img/fondogeo.jpg');
             background-size: cover;
         }
-
         &.geoyes, &.geono {
             pointer-events: none;
         }
